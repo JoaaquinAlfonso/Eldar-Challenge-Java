@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "afdbd59f-74d7-4ab6-8f5d-301573c68cc2",
+		"name": "Entrevista Técnica Eldar - Challenge Java Back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20725983"
+	},
+	"item": [
+		{
+			"name": "Cards",
+			"item": [
+				{
+					"name": "Get all cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://eldar-challenge-java.herokuapp.com/api/v1/cards",
+							"protocol": "https",
+							"host": [
+								"eldar-challenge-java",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get card info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"3812253254689547\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://eldar-challenge-java.herokuapp.com/api/v1/cards/search",
+							"protocol": "https",
+							"host": [
+								"eldar-challenge-java",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate card",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"3812253254689547\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://eldar-challenge-java.herokuapp.com/api/v1/cards/validate",
+							"protocol": "https",
+							"host": [
+								"eldar-challenge-java",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Compare cards",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"8284253214782549\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://eldar-challenge-java.herokuapp.com/api/v1/cards/compare/1684253214789547",
+							"protocol": "https",
+							"host": [
+								"eldar-challenge-java",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"compare",
+								"1684253214789547"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Validate transaction",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionCard\": {\r\n        \"id\": 1,\r\n        \"cardBrand\": \"VISA\",\r\n        \"cardNumber\": \"1684253214789547\",\r\n        \"cardHolder\": \"Joaquin Alfonso\",\r\n        \"expireDate\": \"2024-10-10\"\r\n    },\r\n    \"cardConsumption\": 999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://eldar-challenge-java.herokuapp.com/api/v1/transactions/validate",
+							"protocol": "https",
+							"host": [
+								"eldar-challenge-java",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get interest rate from transaction",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionCard\": {\r\n        \"id\": 1,\r\n        \"cardBrand\": \"VISA\",\r\n        \"cardNumber\": \"1684253214789547\",\r\n        \"cardHolder\": \"Joaquin Alfonso\",\r\n        \"expireDate\": \"2024-10-10\"\r\n    },\r\n    \"cardConsumption\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://eldar-challenge-java.herokuapp.com/api/v1/transactions/interest_rate",
+							"protocol": "https",
+							"host": [
+								"eldar-challenge-java",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"interest_rate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
